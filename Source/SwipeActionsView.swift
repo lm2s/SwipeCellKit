@@ -11,7 +11,7 @@ protocol SwipeActionsViewDelegate: class {
     func swipeActionsView(_ swipeActionsView: SwipeActionsView, didSelect action: SwipeAction)
 }
 
-class SwipeActionsView: UIView {
+public class SwipeActionsView: UIView {
     weak var delegate: SwipeActionsViewDelegate?
     
     let transitionLayout: SwipeTransitionLayout
@@ -251,7 +251,7 @@ class SwipeActionsView: UIView {
         return mask
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         for subview in subviews.enumerated() {
